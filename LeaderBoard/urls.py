@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login
+from django.contrib.auth import login
 from .views import leaderboard, leaderboard_update
 
 urlpatterns = [

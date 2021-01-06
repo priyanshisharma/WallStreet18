@@ -14,7 +14,7 @@ class Share(models.Model):
 		return str(self.name)
 
 class SharePrice(models.Model):
-	share = models.ForeignKey('Share')
+	share = models.ForeignKey('Share', on_delete = models.CASCADE)
 	price = models.FloatField(default=1000.00)
 	time = 	models.TimeField(auto_now=True)
 
@@ -22,7 +22,7 @@ class SharePrice(models.Model):
 		return str(self.share.name)
 
 class UserHolding(models.Model):
-	user = models.ForeignKey(User)
+	user = models.ForeignKey(User, on_delete = models.CASCADE)
 	time = models.TimeField(auto_now=True)
 	holding = models.FloatField(default=25000.00)
 
@@ -30,15 +30,15 @@ class UserHolding(models.Model):
 		return self.user.username
 
 class CurrentUserHolding(models.Model):
-	user = models.ForeignKey(User)
+	user = models.ForeignKey(User, on_delete = models.CASCADE)
 	current_holding = models.FloatField(default=25000.00)
 
 	def __str__(self):
 		return self.user.username
 
 class UserShareQuantity(models.Model):
-	user = models.ForeignKey(User)
-	share = models.ForeignKey('Share')
+	user = models.ForeignKey(User, on_delete = models.CASCADE)
+	share = models.ForeignKey('Share', on_delete = models.CASCADE)
 	quantity = models.IntegerField(default=0)
 
 	def __str__(self):
