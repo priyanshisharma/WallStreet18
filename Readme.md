@@ -1,7 +1,7 @@
 *How to run the application*
 
 
-*Clone the repository git clone https://github.com/shreyanshs7/WallStreet18.git*
+*Clone the repository git clone https://github.com/priyanshisharma/WallStreet18.git*
 
 
 *Go to project directory*
