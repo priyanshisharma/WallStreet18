@@ -1,10 +1,10 @@
 import os, sys, schedule, time, random
-# sys.path.append('/home/pratibha/Desktop/wallstreet18/')
-sys.path.append('/Users/priyanshi/Desktop/AI Champ/WallStreet18')
+sys.path.append('.')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "WallStreet18.settings")
 import django
 django.setup()
 
+sys.path.append('..')
 from SellBuy.models import Share, SharePrice
 # from WallStreetML.wallstreet import sharePrice
 
