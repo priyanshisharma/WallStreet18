@@ -1,5 +1,7 @@
 Django==1.11
 gunicorn==19.9.0
 mysqlclient==1.4.4
+psycopg2-binary==2.8.6
 pytz==2019.2
+schedule==0.6.0
 whitenoise==3.3.1
